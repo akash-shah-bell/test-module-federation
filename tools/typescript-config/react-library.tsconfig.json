@@ -1,0 +1,15 @@
+{
+  "extends": "./base.tsconfig.json",
+  "compilerOptions": {
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "composite": true,
+    "moduleResolution": "bundler",
+    "jsx": "react-jsx",
+    "module": "preserve",
+    "skipLibCheck": true,
+    "incremental": true,
+    "isolatedModules": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowSyntheticDefaultImports": true
+  }
+}

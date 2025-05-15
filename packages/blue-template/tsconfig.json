@@ -1,0 +1,28 @@
+{
+  "extends": "@tools/typescript-config/react-library.tsconfig.json",
+  "compilerOptions": {
+    // output
+    "declarationDir": "./dist/_types",
+    "outDir": "./dist",
+    "baseUrl": ".",
+    "rootDir": "./",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": [
+    "index.ts",
+    "src"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "build",
+    "public",
+    ".vscode",
+    ".storybook",
+    ".git",
+    ".idea",
+    ".vscode"
+  ]
+}

@@ -1,0 +1,7 @@
+### artifacts
+dist
+build
+node_modules
+.turbo
+*.log
+DS_Store

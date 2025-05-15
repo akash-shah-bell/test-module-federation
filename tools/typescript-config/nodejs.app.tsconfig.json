@@ -1,0 +1,15 @@
+{
+  "extends": "./base.tsconfig.json",
+  "include": [
+    "src/**/*",
+    "index.ts"
+  ],
+  "exclude": [
+    "integration-test/**/*",
+    "unit-test/**/*",
+    "dist",
+    "node_modules",
+    ".vscode",
+    "lib"
+  ]
+}

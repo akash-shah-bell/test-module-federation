@@ -1,0 +1,12 @@
+{
+  "name": "@tools/module-federation-config",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "workspaces": [
+    "tools/*"
+  ],
+  "devDependencies": {
+    "@module-federation/typescript": "3.1.3"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "extends": "@tsconfig/react-native/tsconfig.json",
+  "compilerOptions": {
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "jsx": "react-native",
+    "moduleResolution": "bundler",
+    "noEmit": true,
+    "strict": true,
+    "target": "esnext",
+    "module": "es2020",
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "es2017"
+    ],
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitAny": false,
+    "noImplicitReturns": true,
+    "strictNullChecks": true,
+    "resolveJsonModule": true,
+    // for printing errors in pretty format
+    "pretty": true,
+    // declaration config,
+    "declaration": true,
+    "declarationDir": "./build/@types",
+    "declarationMap": true,
+    // output
+    "preserveConstEnums": true,
+    "removeComments": true,
+    "sourceMap": true,
+    "rootDir": "./",
+    "outDir": "./dist/",
+    "baseUrl": ".",
+    // below paths are relative to "baseUrl". you must also add same configs in "babel.config.js" file to resolve them while bundling (since this file just helps for IDE Intellisense AND it is not used while actually compiling the app)
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    },
+    // Skip type checking .d.ts files that are included with TypeScript.
+    "skipLibCheck": true
+  },
+  "include": [
+    "src/**/*",
+    "App.tsx",
+    "index.ts",
+    "app.json",
+    "gesture-handler.js",
+    "gesture-handler.native.js",
+  ],
+  "exclude": [
+    "node_modules",
+    "build",
+    "dist",
+    ".temp",
+    "jest.config.js",
+    "eslint.config.js",
+    "babel.config.js",
+    "metro.config.js",
+    ".prettierrc.js",
+    "android",
+    "ios",
+    "secrets"
+  ]
+}

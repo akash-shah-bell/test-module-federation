@@ -1,0 +1,32 @@
+{
+  "name": "blue-template-repo",
+  "private": true,
+  "scripts": {
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "lint": "turbo lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "uniform-proxy": "cd apps/uniform-proxy && npm run dev",
+    "unix:configure:mainapp": "./scripts/pull-mainapp.sh",
+    "prepare": "husky || true",
+    "test": "turbo test"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.7.1",
+    "@commitlint/config-conventional": "^19.7.1",
+    "ajv": "^8.17.1",
+    "husky": "^9.1.7",
+    "prettier": "^3.2.5",
+    "turbo": "^2.3.0",
+    "typescript": "5.5.4"
+  },
+  "packageManager": "npm@11.0.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "tools/*"
+  ]
+}

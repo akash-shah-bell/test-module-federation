@@ -1,0 +1,10 @@
+{
+  "extends": "./base.tsconfig.json",
+  "compilerOptions": {
+    "module": "NodeNext",
+    "moduleResolution": "nodenext",
+    "jsx": "react",
+    "noEmit": false,
+    "composite": true
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "extends": "@tools/typescript-config/react.tsconfig.json",
+  "compilerOptions": {
+    // output
+    "declarationDir": "./dist/_types",
+    "outDir": "./dist",
+    "baseUrl": ".",
+    "rootDir": "./",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": [
+    "index.tsx",
+    "src"
+  ],
+  "exclude": ["node_modules"]
+}

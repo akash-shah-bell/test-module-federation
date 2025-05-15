@@ -1,0 +1,26 @@
+{
+  "extends": "tools/typescript-config/nodejs.app.tsconfig.json",
+  "compilerOptions": {
+    "composite": true,
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    }
+  },
+  "include": [
+    "src/**/*",
+    "index.ts",
+    "temp/**/*"
+  ],
+  "exclude": [
+    "integration-test/**/*",
+    "unit-test/**/*",
+    "dist",
+    "node_modules",
+    ".vscode",
+    "lib"
+  ]
+}
