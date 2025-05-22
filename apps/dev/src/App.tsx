@@ -1,26 +1,20 @@
-import React, { lazy, Suspense } from 'react';
+import { Button, useHelloWorld } from "@explat-mfe/blue-template/index";
 
-// @ts-ignore
-const Button = lazy(() => import('mfe1/Button'));
-
-// import {Button} from "mfe1"
+// {@link https://stackoverflow.com/a/76774967}
+(global as any).$RefreshReg$ = () => { };
+(global as any).$RefreshSig$ = () => () => { };
 
 export const App = () => {
 
-
-setTimeout(() => {
-  console.log('button: ', Button)
-}, 3000)
+  const result = useHelloWorld()
+  console.log('useHelloWorld: ', result)
 
   return (
     <div>
       <h1>Hello World</h1>
-      <Suspense>
-        {Button ? <Button title="Click Me!!!"></Button> : <p>...Loading</p>}
-        {/* PLAT3 - ProductCard */}
-        {/* PLAT2 - LoginButton */}
-        {/* PLAT3 - Carousal */}
-      </Suspense>
+      <Button title="Click Me!!!" onClick={() => alert("hello world!!!")} />
     </div>
   );
 }
+
+export default App;

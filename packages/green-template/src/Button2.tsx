@@ -7,7 +7,7 @@ export type ButtonPropsType = {
   onClick?: () => void
 }
 
-export const Button = (props: ButtonProps) => {
+export const Button2 = (props: ButtonProps) => {
   const onClick = () => props?.onClick && props?.onClick()
   return <button onClick={onClick}>{props.title}</button>
 }

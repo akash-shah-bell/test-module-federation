@@ -1,8 +1,8 @@
 {
-  "extends": "@tools/typescript-config/react.tsconfig.json",
+  "extends": "@tools/typescript-config/react-library.tsconfig.json",
   "compilerOptions": {
     // output
-    "declarationDir": "./dist/_types",
+    "declarationDir": "./dist/@mf-types",
     "outDir": "./dist",
     "baseUrl": ".",
     "rootDir": "./",
@@ -12,7 +12,8 @@
   },
   "include": [
     "index.tsx",
-    "src"
+    "src",
+    "@mf-types"
   ],
   "exclude": ["node_modules"]
 }
