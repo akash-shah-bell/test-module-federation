@@ -1,4 +1,6 @@
-import { Button, useHelloWorld } from "@explat-mfe/blue-template/index";
+import React from "react";
+// @ts-ignore
+import { Button, useHelloWorld } from "@remote/mfe1/index";
 
 // {@link https://stackoverflow.com/a/76774967}
 (global as any).$RefreshReg$ = () => { };

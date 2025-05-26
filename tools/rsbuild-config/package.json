@@ -1,0 +1,14 @@
+{
+  "name": "@tools/rsbuild-config",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "workspaces": [
+    "tools/*"
+  ],
+  "devDependencies": {
+    "@rsbuild/core": "^1.2.15",
+    "@rsbuild/plugin-react": "^1.1.1",
+    "postcss-preset-env": "10.1.6"
+  }
+}

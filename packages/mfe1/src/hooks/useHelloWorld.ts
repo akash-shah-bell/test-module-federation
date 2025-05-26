@@ -1,7 +1,8 @@
-import { useHelloWorld2 } from "@explat-mfe/green-template/index";
+// @ts-ignore
+import { useHelloWorld2 } from "@remote/mfe2/index";
 
 export const useHelloWorld = () => {
-  
+
   const data = useHelloWorld2();
   
   return {

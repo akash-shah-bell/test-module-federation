@@ -1,21 +1,39 @@
 {
   "$schema": "https://turbo.build/schema.json",
   "ui": "tui",
+  "globalEnv": ["FEDERATION_DEBUG"],
   "tasks": {
-    "build": {
-      "dependsOn": ["^build"],
-      "inputs": ["$TURBO_DEFAULT$", ".env*"],
-      "outputs": [".next/**", "!.next/cache/**"]
-    },
     "lint": {
       "dependsOn": ["^lint"]
     },
     "check-types": {
       "dependsOn": ["^check-types"]
     },
+    "build": {
+      "cache": false,
+      "dependsOn": ["^build"],
+      "inputs": ["$TURBO_DEFAULT$", ".env*"]
+    },
+    "build:rsbuild": {
+      "cache": false,
+      "dependsOn": ["^build:rsbuild"]
+    },
+    "build:rspack": {
+      "cache": false,
+      "dependsOn": ["^build:rspack"]
+    },
     "dev": {
       "cache": false,
       "persistent": true
+    },
+    "dev:rsbuild": {
+      "cache": false,
+      "persistent": true
+    },
+    "dev:rspack": {
+      "cache": false,
+      "persistent": true,
+      "env": ["FEDERATION_DEBUG"]
     },
     "test": {
       "dependsOn": ["^test"],

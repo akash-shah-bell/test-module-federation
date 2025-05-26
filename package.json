@@ -1,9 +1,13 @@
 {
-  "name": "blue-template-repo",
+  "name": "test-module-federation",
   "private": true,
   "scripts": {
     "build": "turbo build",
+    "build:rsbuild": "turbo build:rsbuild",
+    "build:rspack": "turbo build:rspack",
     "dev": "turbo dev",
+    "dev:rsbuild": "turbo dev:rsbuild",
+    "dev:rspack": "FEDERATION_DEBUG=true turbo dev:rspack",
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "uniform-proxy": "cd apps/uniform-proxy && npm run dev",

@@ -1,7 +1,6 @@
 import React, { lazy, Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
-
-const App = lazy(() => import('./src/App'))
+import App from './App'
 
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);

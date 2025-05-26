@@ -1,10 +1,14 @@
 {
+  "compileOnSave": false,
   // "extends": "@tools/typescript-config/react.tsconfig.json", // does not work with module federation
   "compilerOptions": {
     "module": "esnext",
     "moduleResolution": "bundler",
     "jsx": "react-jsx",
     "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "allowJs": true,
+    "esModuleInterop": true,
 
     // declaration emission
     "noEmit": false,
